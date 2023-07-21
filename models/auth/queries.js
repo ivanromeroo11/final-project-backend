@@ -22,6 +22,8 @@ const selectUser = (username) => sql.unsafe`
 
 `;
 
+
+
     module.exports = {
         insertUser,
         selectByEmail,

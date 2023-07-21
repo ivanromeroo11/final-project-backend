@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 CREATE TYPE category AS ENUM (
-  'tarjetas graficas', 'procesadores', 'ventilacion', 'palcas base', 'discos duros', 'memorias ram', 'fuentes de alimentacion'
+  'tarjetas graficas', 'procesadores', 'ventilacion', 'placas base', 'discos duros', 'memorias ram', 'fuentes de alimentacion'
 );
 
 CREATE TABLE IF NOT EXISTS orders (
@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS products (
     description TEXT NOT NULL,
     price DECIMAL NOT NULL,
     category TEXT NOT NULL,
+    slug TEXT NOT NULL,
     created_by uuid REFERENCES orders (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
