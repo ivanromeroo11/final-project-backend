@@ -14,9 +14,7 @@ CREATE TABLE IF NOT EXISTS users (
     password TEXT NOT NULL
 );
 
-CREATE TYPE category AS ENUM (
-  'tarjetas graficas', 'procesadores', 'ventilacion', 'placas base', 'discos duros', 'memorias ram', 'fuentes de alimentacion'
-);
+
 
 CREATE TABLE IF NOT EXISTS orders (
   id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
